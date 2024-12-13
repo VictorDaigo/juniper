@@ -1,0 +1,368 @@
+/* Reset / Normmalizador */
+*{
+  margin:0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+a{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+p a{
+  display: inline;
+}
+img , svg {
+  display: block;
+  width: 100%;
+  height: inherit;
+
+}
+svg{
+  fill: currentColor;
+}
+:root{
+  font-size: 100%;
+  scroll-behavior: smooth;
+  --color-primario: rgb(168, 92, 46);
+
+}
+body{
+  font-family: "Roboto", sans-serif;
+  hyphens: auto;
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: "Alegreya", sans-serif;
+}
+.Header{
+  width: 20%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  color: white;
+  z-index: 2;
+
+}
+
+.Header-top{
+  padding: 20px 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(56, 61, 53);
+
+}
+
+.Header-top-button{
+  padding: 10px 30px;
+  border-radius: 3px;
+  border: 2px solid var(--color-primario);
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 0.81rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.Header-top-button:hover{
+  color: var(--color-primario);
+
+}
+.Header-bottom{
+  transform: translateX(300px);
+  background-color: rgb(56, 61, 53);
+  transition: transform .9s ease;
+  min-height: 100vh;
+  pointer-events: none;  
+  display: none;
+
+}
+.Header-top-burguer-wrapper{
+  cursor: pointer;
+  width: 50px;
+  position: relative;
+}
+.Header-top-burguer-wrapper-close{
+  background-color: rgb(56, 61, 53);
+  width: 50px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+}
+.IsOpen{
+  opacity: 1;
+
+}
+.IsActive{
+  transform: translateX(0);
+  pointer-events: auto;
+  display: flex;
+
+}
+.Header-bottom-nav{
+  width: 100%;
+}
+.Header-bottom-ul{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: left;
+}
+.Header-bottom-a{
+  padding: 0 12.5px;
+  border: 1px solid rgb(33, 33, 33) ;
+  line-height: 40px;
+  transition: background-color .3s ease;
+}
+.Header-bottom-a:hover{
+  background-color: rgba(211, 211, 211, 0.438);
+}
+.Fondo-img-wrapper{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.Fondo-img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+.Fondo-img--static{
+  position: static;
+  height: 100vh;
+
+}
+.Hero{
+  background-image: url(../assets/ACPHOTO_scaled.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+.Hero-h1{
+  width: 50%;
+  min-height: 300px;
+}
+.Hero-logo-wrapper{
+  width: 100%;
+}
+.Hero-span{
+  display: none;
+}
+.About-us{
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+.About-us-wrapper{
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid var(--color-primario);
+  gap: 30px;
+
+}
+.About-us-h2{
+  font-size: 2.43rem;
+  font-weight: 400;
+  line-height: 2.43rem;
+  color: var(--color-primario);
+}
+.About-us-p{
+  width: 60%;
+  color: rgb(36, 68, 78);
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+.About-us-a{
+  background-color: rgb(94, 104, 93);
+  padding: 15px 30px;
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+.About-us-a:hover{
+  background-color: #24444e;
+}
+.About-us-video-wrapper{
+  width: 80%;
+  min-height: 400px;
+  background-color: yellow;
+}
+.Productos{
+  width: 100%;
+  margin: auto;
+  max-width: 1100px;
+  min-height: 600px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.Productos-div{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-height: 400px;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 30px;
+  background-color: rgba(56, 61, 53, 0.9);
+
+}
+.Productos-h3{
+  color: rgb(255, 255, 255);
+  font-size: 2.56rem;
+  font-weight: 300;
+  line-height: 2.56rem;
+}
+.Productos-p{
+  color: rgb(211, 211, 211);
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+.Productos-a{
+  background-color: var(--color-primario);
+  padding: 15px 30px;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+.Carrusel{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.Carrusel-container{
+  min-height: 400px;
+  display: flex;
+  flex-flow: row nowrap;
+  transition: transform .6s ease;
+
+}
+
+.About-us-wrapper--Carrusel{
+  text-align: start;
+  }
+.Carrusel-comment-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    padding: 0 50px;
+    gap: 50px;
+  }
+.Carrusel-comment{
+  background-color: lightblue;
+
+  }
+  .Carrusel-button-arrow{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: calc(50% - 1.5rem);
+    cursor: pointer;
+    background-color: white;
+  }
+  .Carrusel-button-arrow--Next{
+    right: 0;
+    
+  }
+  .Carrusel-button-arrow--Prev{
+    left: 0;
+  }
+  .Carrusel-ul{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .Carrusel-button-select{
+    background-color: gray;
+    opacity: 0.3;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+  }
+  .Carrusel-button-select:hover{
+    opacity: 1;
+  }
+ 
+  .Galeria{
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    z-index: 1;
+  }
+  .Galeria-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+  
+  }
+  .Galeria-img-wrapper{
+    height: 200px;
+    background-color: red;
+    width: calc(100% / 4);
+    
+  }
+  .Galeria-img{
+    object-fit: cover;
+    height: 200px;
+  }
+  .IsVisible{
+    opacity: 1;
+  }
+  
