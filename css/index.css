@@ -133,6 +133,15 @@ h1 , h2 , h3 , h4 , h5 , h6{
 .Header-bottom-a:hover{
   background-color: rgba(211, 211, 211, 0.438);
 }
+@media( max-width: 1000px){
+  .Header{
+    width: 250px;
+  }
+  .Header-top{
+    padding: .625rem;
+  }
+}
+
 .Fondo-img-wrapper{
   width: 100%;
   position: fixed;
@@ -151,6 +160,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
   height: 100vh;
 
 }
+
 .Hero{
   background-image: url(../assets/ACPHOTO_scaled.jpg);
   background-repeat: no-repeat;
@@ -220,7 +230,23 @@ h1 , h2 , h3 , h4 , h5 , h6{
 .About-us-video-wrapper{
   width: 80%;
   min-height: 400px;
-  background-color: yellow;
+}
+@media( max-width: 1000px){
+  .Hero-h1{
+    width: 100%;
+  }
+  .About-us-p{
+    width: 100%;
+  }
+  .About-us-wrapper{
+    padding: 1rem;
+  }
+  .Fondo-img-wrapper{
+    display: none;
+  }
+  .About-us-video-wrapper{
+    min-height: 0;
+  }
 }
 .Productos{
   width: 100%;
@@ -264,6 +290,15 @@ h1 , h2 , h3 , h4 , h5 , h6{
   font-size: 1rem;
   line-height: 1rem;
   text-transform: uppercase;
+}
+@media( max-width: 1000px){
+  .Productos{
+    flex-flow: column nowrap;
+  }
+  .Productos-div{
+    width: 100%;
+    padding: 1rem;
+  }
 }
 .Carrusel{
   width: 100%;
@@ -331,6 +366,11 @@ h1 , h2 , h3 , h4 , h5 , h6{
   }
   .Carrusel-button-select:hover{
     opacity: 1;
+  }
+  @media( max-width: 1000px){
+    .Carrusel-comment-wrapper{
+      flex-flow: column nowrap;
+    }
   }
  
   .Galeria{
